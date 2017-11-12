@@ -36,7 +36,7 @@
 <!-- As a heading -->
 <div class="jumbotron">
   <h1 class="display-3">Welcome to Justin's Sword Store!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <p class="lead">All kinds of swords for sale, accommodating many budgets and styles!</p>
   <hr class="my-4">
     <img src = "https://i.pinimg.com/736x/b2/57/96/b257967e73287e3bf614336b107b6361--dynamic-poses-figurative-language.jpg" />
   <p class="lead">
@@ -46,5 +46,7 @@
 
 <% @products.each do |product| %>
    <h2> <%= product.name %> </h2>
-   <img src = "<%= product.image %>"/>
+   <img width = "200px" src = "<%= product.image %>"/>
+   <h3> $<%= product.price %> </h3>
+   <h4> <%= product.description %> </h4>
 <% end %>
