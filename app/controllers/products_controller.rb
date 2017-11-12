@@ -9,4 +9,8 @@ class ProductsController < ApplicationController
     @product = Product.find_by(id: product_id)
     render 'show.html.erb'
   end
+
+  def new
+    render 'new.html.erb'
+  end
 end

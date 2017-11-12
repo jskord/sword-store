@@ -6,9 +6,11 @@
   <hr class="my-4">
     <img width = "300px" src = "https://i.pinimg.com/736x/b2/57/96/b257967e73287e3bf614336b107b6361--dynamic-poses-figurative-language.jpg" />
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <a class="btn btn-primary btn-lg" href="/products/new" role="button">Add a Sword!</a>
   </p>
 </div>
+
+
 
 <% @products.each do |product| %>
    <a href = "/products/<%= product.id %>"> <h2> <%= product.name %> </h2> </a>
