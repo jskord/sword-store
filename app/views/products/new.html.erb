@@ -1,19 +1,20 @@
-<form>
-  <div class="col-7">
-    <label for="exampleFormControlInput1">Name</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Sword's Name">
+<h1>Hello!</h1>
+<%= form_tag '/products', method: :post do %>
+  <div>
+    <%= label_tag :title %>
+    <%= text_field_tag :title %>
   </div>
-  <div class="col-7">
-    <label for="exampleFormControlInput1">Image</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Paste Link to Image">
+   <div>
+    <%= label_tag :image %>
+    <%= text_field_tag :image %>
   </div>
-  <div class="col-7">
-    <label for="exampleFormControlInput1">Price</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Price">
+   <div>
+    <%= label_tag :price %>
+    <%= text_field_tag :price %>
   </div>
-  <div class="col-7">
-    <label for="exampleFormControlTextarea1">Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+   <div>
+    <%= label_tag :description %>
+    <%= text_field_tag :description %>
   </div>
-</form>
-
+  <%=submit_tag "Add Sword" %>
+  <% end %>
