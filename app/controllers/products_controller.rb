@@ -13,4 +13,15 @@ class ProductsController < ApplicationController
   def new
     render 'new.html.erb'
   end
+
+  def create
+    product = Product.new(
+      name: params[:name],
+      image: params[:image],
+      price: params[:price],
+      description: params[:description]
+      )
+    product.save
+    render 'create.html.erb'
+  end
 end
