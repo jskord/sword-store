@@ -24,4 +24,8 @@ class ProductsController < ApplicationController
     product.save
     render 'create.html.erb'
   end
+
+  def edit
+    render 'edit.html.erb'
+  end
 end
