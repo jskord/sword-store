@@ -2,4 +2,6 @@
 <img width = "200px" src = "<%= @product.image %>" />
 <h2> <%= @product.price %> </h2>
 <p> <%= @product.description %> </p>
-<a href = "/products/<%= @product.id %>/edit">Edit</a>  
+<a href = "/products/<%= @product.id %>/edit">Edit</a> 
+<%= link_to "Delete this Sword", "/products/#{@product.id}", method: :delete %>
+ 
