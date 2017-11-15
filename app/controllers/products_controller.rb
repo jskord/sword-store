@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
       description: params[:description]
       )
     product.save
-    render 'create.html.erb'
+    redirect_to "/products/#{product.id}"
   end
 
   def edit
@@ -39,13 +39,13 @@ class ProductsController < ApplicationController
     product.price = params[:price]
     product.description = params[:description]
     product.save
-    render 'update.html.erb'
+    redirect_to "/products/#{product.id}"
   end
 
   def destroy
     product_id = params[:id]
     product = Product.find_by(id: product_id)
     product.destroy
-    render 'destroy.html.erb'
+    redirect_to '/'
   end
 end
