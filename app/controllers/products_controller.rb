@@ -22,6 +22,7 @@ class ProductsController < ApplicationController
       description: params[:description]
       )
     product.save
+    flash[:success] = "Sword created successfully!"
     redirect_to "/products/#{product.id}"
   end
 
@@ -39,6 +40,7 @@ class ProductsController < ApplicationController
     product.price = params[:price]
     product.description = params[:description]
     product.save
+    flash[:success] = "Sword updated successfully!"
     redirect_to "/products/#{product.id}"
   end
 
@@ -46,6 +48,7 @@ class ProductsController < ApplicationController
     product_id = params[:id]
     product = Product.find_by(id: product_id)
     product.destroy
+    flash[:success] = "Sword destroyed successfully!"
     redirect_to '/'
   end
 end
