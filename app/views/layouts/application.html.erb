@@ -43,7 +43,7 @@
 </nav>
 <div class="container">
   <% flash.each do |name, message| %>
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-<%= name %>" role="alert">
       <h2> <%= message %> </h2>
     </div>
 

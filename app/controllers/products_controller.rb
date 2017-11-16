@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
     product.price = params[:price]
     product.description = params[:description]
     product.save
-    flash[:success] = "Sword updated successfully!"
+    flash[:danger] = "Sword updated successfully!"
     redirect_to "/products/#{product.id}"
   end
 
