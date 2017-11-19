@@ -6,4 +6,7 @@ class Product < ApplicationRecord
       return "Everyday Value!"
     end
   end
+  def tax
+    return price.to_f * 0.09
+  end
 end
