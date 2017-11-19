@@ -1,5 +1,10 @@
 <h1><%= @product.name %></h1>
 <img width = "200px" src = "<%= @product.image %>" />
+<% if @product.discount_item? %>
+  <h4 class = "discount_item">Discount Item!</h4>
+<% else %>
+  <h4> Everyday value!</h4>
+<% end %> 
 <h4> Price: $<%= @product.price %> </h4>
 <p>Tax $<%= @product.tax %> </p>
 <p>Total $<%= @product.total %> </p>

@@ -12,4 +12,8 @@ class Product < ApplicationRecord
   def total
     return price.to_f + tax
   end
+  def discount_item?
+    price.to_f < 100
+  end
+
 end
