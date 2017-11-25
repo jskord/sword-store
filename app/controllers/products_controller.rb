@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    sort_attribute = params[:sort_by]
+    sort_order = params[:sort_order]
+    @products = Product.order(sort_attribute || :name => sort_order || :asc)
     render 'index.html.erb'
 
   end
